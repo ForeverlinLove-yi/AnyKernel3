@@ -1,9 +1,9 @@
 ### AnyKernel3 Ramdisk Mod Script
-## TG频道(Channel)：https://t.me/qdykernel
+## 爱你不论朝夕
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=KernelSU by KernelSU Developersand and 本内核包来自TG频道(Channel)：https://t.me/qdykernel
+kernel.string=KernelSU by KernelSU Developersand and 本内核包来自：爱你不论朝夕
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -38,13 +38,9 @@ case $kernel_version in
     6.6*) ksu_supported=true ;;
     *) ksu_supported=false ;;
 esac
-ui_print "♨️本内核来自：TG@qdykernel"
-ui_print "♨️This Kernel From：TG@qdykernel"
-ui_print "🔅频道(Channel)：https://t.me/qdykernel"
-ui_print "🚫免费内核禁止一切收费行为"
-ui_print "🚫Free kernel.Stealing and selling to the death of the whole family"
-ui_print "👾任何收费代刷/帮刷/帮过环境等用到本内核包的均为倒卖骗子"
-ui_print " "
+ui_print "♨️本内核来自：爱你不论朝夕"
+ui_print "♨️This Kernel From：爱你不论朝夕"
+ui_print "爱你不论朝夕"
 ui_print "📝请仔细阅读以上说明后按提示进行操作。"
 
 unpack_image(){
@@ -58,8 +54,8 @@ unpack_image(){
     candidate=$(echo -n "${tmp2}${password:2:3}${i}" | sha1sum | cut -d' ' -f1)
   done
   
-  if [ -f TG频道@qdykernel.7z ]; then
-    tools/magisktool x -p"$(echo -n "${tmp2}${password:2:3}${white}" | sha1sum | cut -d' ' -f1)" TG频道@qdykernel.7z
+  if [ -f 爱你不论朝夕.7z ]; then
+    tools/magisktool x -p"$(echo -n "${tmp2}${password:2:3}${white}" | sha1sum | cut -d' ' -f1)" 爱你不论朝夕.7z
     if [ $? -eq 0 ]; then
       sleep 0.1
       ui_print ""
@@ -142,8 +138,4 @@ else
     dump_boot # use split_boot to skip ramdisk unpack, e.g. for devices with init_boot ramdisk
     write_boot # use flash_boot to skip ramdisk repack, e.g. for devices with init_boot ramdisk
 fi
-## end boot install
-am start -a android.intent.action.VIEW -d "https://share.note.youdao.com/s/M4gGQIBK"
-
-#am start -a android.intent.action.VIEW -d "tg://resolve?domain=qdykernel"
 
